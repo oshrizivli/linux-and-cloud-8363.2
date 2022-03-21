@@ -1,0 +1,3 @@
+kubectl create deploy webapp --image=nginx --dry-run -o yaml > webapp.yaml
+vi webapp.yaml
+# see final version in vi webapp.yaml
