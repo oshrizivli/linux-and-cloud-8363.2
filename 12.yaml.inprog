@@ -1,0 +1,49 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: use-pvspec-oshri
+  creationTimestamp: null
+  labels:
+    run: use-pv
+spec:
+  containers:
+  - name: use-pvc
+    image: nginx
+    resources: {}
+    volumeMounts:
+    - mountPath: "/data"
+      name: nginx-pvc
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+  volumes:
+  - name: nginx-pvc
+    persistentVolumeClaim:
+      claimName: pvc-1
+status: {}
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-1
+spec:
+  storageClassName: ""
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 100Mi
+  volumeName: pv-1
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-1
+spec:
+  storageClassName: ""
+  accessModes:
+  - ReadWriteMany
+  capacity:
+    storage: 100Mi
+
+
+

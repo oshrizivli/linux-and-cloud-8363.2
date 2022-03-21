@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: static-busybox
+spec:
+  containers:
+  - name: static-busybox
+    image: busybox    
+    command: ["/bin/sh"]
+    args: ["-c", "echo running sleep; sleep 1000"]
+  nodeSelector:
+    kubernetes.io/role: master
