@@ -1,3 +1,17 @@
+1) 
 kubectl create deploy webapp --image=nginx --dry-run -o yaml > webapp.yaml
 vi webapp.yaml
-# see final version in vi webapp.yaml
+kubectl apply -f webapp.yaml  # webapp.yaml attached
+
+2) kubectl rollout status deployments/webapp
+
+3) kubectl get replicaset
+
+4)
+kubectl get pods  -o yaml > webapp_pods.yaml  # webapp_pods.yaml attached
+kubectl get rs  -o yaml > webapp_rs.yaml      # webapp_rs.yaml attached
+# Delete the deployment you just created and watch all the pods are also being  deleted
+terminal1 : watch kubectl get pods
+terminal2 : kubectl delete deploy webapp
+
+5)
