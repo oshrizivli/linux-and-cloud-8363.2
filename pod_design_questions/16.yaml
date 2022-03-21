@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:    
+  creationTimestamp: null 
+  labels: 
+    run: nginx
+  name: nginx
+spec:
+  conitainers:
+  - image: nginx
+    name: nginx
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never 
+  nodeSelector:
+    kubernetes.io/role: node
+    nodeName: nginxnode
+status: {}
