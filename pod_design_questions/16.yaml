@@ -6,13 +6,12 @@ metadata:
     run: nginx
   name: nginx
 spec:
-  conitainers:
+  containers:
   - image: nginx
     name: nginx
     resources: {}
   dnsPolicy: ClusterFirst
   restartPolicy: Never 
   nodeSelector:
-    kubernetes.io/role: node
     nodeName: nginxnode
 status: {}
