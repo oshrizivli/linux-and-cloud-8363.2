@@ -1,5 +1,11 @@
 1) kubectl run nginx-pod-oshri --image nginx:alpine
+
 2) kubectl run messaging --image redis:alpine --labels tier=msg
+
 3) kubectl create namespace apx-x998-oshri
+
 4) kubectl get nodes  -o json  > /tmp/nodes-oshri
+
 5) kubectl expose pod/messaging --type=ClusterIP --port 6379 --target-port 6379 --name messaging-service --labels tier=msg
+ 
+
