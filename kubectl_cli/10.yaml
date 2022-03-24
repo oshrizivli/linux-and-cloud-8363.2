@@ -5,7 +5,7 @@ metadata:
   labels:
     app: pv-analytics
 spec:
-  storageClassName: ""
+  storageClassName: default
   capacity:
     storage: 100Mi
   accessModes:
