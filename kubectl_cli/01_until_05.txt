@@ -4,8 +4,6 @@
 
 3) kubectl create namespace apx-x998-oshri
 
-4) kubectl get nodes  -o json  > /tmp/nodes-oshri
+4) kubectl get nodes  -o json  > /tmp/nodes-oshri	# nodes-oshri attached
 
 5) kubectl expose pod/messaging --type=ClusterIP --port 6379 --target-port 6379 --name messaging-service --labels tier=msg
- 
-
