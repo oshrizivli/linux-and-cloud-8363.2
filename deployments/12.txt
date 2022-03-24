@@ -1,0 +1,4 @@
+12)
+kubectl create job hello-job --image=busybox --dry-run -o yaml -- echo "Hello I am from job" > hello-job.yaml
+vi webapp.yaml
+kubectl apply -f hello-job.yaml  # hello-job.yaml attached
