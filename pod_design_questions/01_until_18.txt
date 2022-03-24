@@ -46,4 +46,3 @@ kubectl get pods --show-labels
 17) kubectl describe pod nginx | grep Node-Selectors
 
 18) kubectl describe pod nginx | grep Labels
-
