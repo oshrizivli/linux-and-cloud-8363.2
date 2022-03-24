@@ -46,6 +46,3 @@ spec:
     - ReadWriteOnce
   hostPath:
     path: "/data"
-
-
-
