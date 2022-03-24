@@ -16,5 +16,3 @@ spec:
     env:
     - name: beta_env_var_name
       value: "beta-env-var-value"
-
-
