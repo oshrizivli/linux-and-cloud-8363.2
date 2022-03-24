@@ -1,5 +1,3 @@
-# second presentation slide 14
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -17,4 +15,3 @@ spec:
       containers:
       - name: nginx-deploy
         image: nginx:1.16
-
